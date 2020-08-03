@@ -1,17 +1,18 @@
 def generate_trains(src,dest,journey_date,train_type,night_shift):
-    dic = {
-        "Route1":
+    ls = [
             {
                 "src_to_inter_stop":
                     {
+                        "waiting_time": "",
+                        "id" : 0,
                         "train_no": "1",
                         "train_type": "A",
                         "src": "JP",
                         "dest": "AG",
                         "dep_time_at_src": "10:00",
                         "arr_time_at_dest": "12:00",
-                        "route_dist": "500"
-
+                        "journey_time": "500",
+                        "Route_score": 12
                     },
                 "inter_stop_to_dest":
                     {
@@ -21,20 +22,23 @@ def generate_trains(src,dest,journey_date,train_type,night_shift):
                         "dest": "JU",
                         "dep_time_at_src": "14:00",
                         "arr_time_at_dest": "20:00",
-                        "route_dist": "300"
+                        "journey_time": "300",
+                        "Route_score": 0
                     }
             },
-        "Route2":
             {
                 "src_to_inter_stop":
                     {
+                        "waiting_time": "",
+                        "id" : 0,
                         "train_no": "1",
                         "train_type": "A",
                         "src": "JP",
                         "dest": "AG",
                         "dep_time_at_src": "10:00",
                         "arr_time_at_dest": "12:00",
-                        "route_dist": "500"
+                        "journey_time": "500",
+                        "Route_score": 12
                     },
                 "inter_stop_to_dest":
                     {
@@ -44,8 +48,9 @@ def generate_trains(src,dest,journey_date,train_type,night_shift):
                         "dest": "JU",
                         "dep_time_at_src": "14:00",
                         "arr_time_at_dest": "20:00",
-                        "route_dist": "300"
+                        "journey_time": "300",
+                        "Route_score": 0
                     }
             }
-        }
-    return dic
+        ]
+    return ls

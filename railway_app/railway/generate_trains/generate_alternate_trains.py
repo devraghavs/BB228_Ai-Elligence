@@ -47,6 +47,20 @@ class Book_Ticket():
             part2 = i[1]
             part3 = i[2]
             part4 = i[3]
+            n = part1[2]
+            if "." in str(n):  # THIS
+                index = str(n).index('.')  # THIS
+                minutes = str(n)[:index:-1]  # THIS
+                minutes = minutes[::-1]  # THIS
+                minutes = "0." + minutes  # THIS
+                minutes = 60 * float(minutes)  # THIS
+                minutes = str(int(minutes))  # THIS
+                hour = str(int(n))  # THIS
+                time_display = hour + ":" + minutes  # THIS
+            else:  # THIS
+                hour = str(int(n))  # THIS
+                time_display = hour + ":" + "00"  # THIS
+
             key_pass1 = "src_to_inter_stop"
             rtn_dict[key][key_pass1] = dict()
             rtn_dict[key][key_pass1]["waiting_time"] = int(part4)
@@ -57,8 +71,21 @@ class Book_Ticket():
             rtn_dict[key][key_pass1]['dest'] = code_to_name[part1[1][1]]
             rtn_dict[key][key_pass1]['dep_time_at_src'] = trn_arr_dept[part1[0]][part1[1][0]][0]
             rtn_dict[key][key_pass1]["arr_time_at_dest"] = trn_arr_dept[part1[0]][part1[1][1]][0]
-            rtn_dict[key][key_pass1]["journey_time"] = part1[2]
+            rtn_dict[key][key_pass1]["journey_time"]=time_display
             key_pass2 = "inter_stop_to_dest"
+            n2 = part2[2]
+            if '.' in str(n2):  # THIS
+                index = str(n2).index('.')  # THIS
+                minutes2 = str(n2)[:index:-1]  # THIS
+                minutes2 = minutes2[::-1]  # THIS
+                minutes2 = "0." + minutes2  # THIS
+                minutes2 = 60 * float(minutes2)  # THIS
+                minutes2 = str(int(minutes2))  # THIS
+                hour2 = str(int(n2))  # THIS
+                time_display2 = hour2 + ":" + minutes2  # THIS
+            else:  # THIS
+                hour2 = str(int(n2))  # THIS
+                time_display2 = hour2 + ":" + "00"  # THIS
             rtn_dict[key][key_pass2] = dict()
             rtn_dict[key][key_pass2]['train_no'] = part2[0]
             rtn_dict[key][key_pass2]['train_type'] = "Special"
@@ -66,7 +93,7 @@ class Book_Ticket():
             rtn_dict[key][key_pass2]['dest'] = code_to_name[part2[1][1]]
             rtn_dict[key][key_pass2]['dep_time_at_src'] = trn_arr_dept[part2[0]][part2[1][0]][1]
             rtn_dict[key][key_pass2]["arr_time_at_dest"] = trn_arr_dept[part2[0]][part2[1][1]][0]
-            rtn_dict[key][key_pass2]["journey_time"] = part2[2]
+            rtn_dict[key][key_pass2]["journey_time"]=time_display2          #THIS
             counter += 1
 
         return rtn_dict
