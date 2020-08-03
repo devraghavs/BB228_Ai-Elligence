@@ -1,0 +1,48 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'railway/style1.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container1">
+        <h1> Details of Alternate Routes</h1>
+        <ul>
+            {% for routeNum,details in trains_dic.items %}
+                <li> {{ routeNum }}
+                    <ul>
+                        {% for key,value in details.items %}
+                            <li> {{ value.src }} - {{ value.dest }}
+                                <ul>
+                                    <li>Train Number: {{ value.train_no }} </li>
+                                    <li>Train Type: {{ value.train_type }}</li>
+                                    <li>Departure Time from {{ value.src }}: {{ value.dep_time_at_src }} </li>
+                                    <li>Arrival Time at {{ value.dest }}: {{ value.arr_time_at_dest}}</li>
+                                    <li>Route Distance: {{ value.route_dist}} </li>
+                                    <li>Route Rank: {{ value.Route_score }} </li>
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            <li><center></center><a href="book_ticket/{{details.src_to_inter_stop.id}}">Book</a></li></center></li>
+            {% endfor %}
+        </ul>
+
+
+        <form action="/railway/" method="get" enctype="multipart/form-data">
+                <center>
+                    <input type="submit"
+                       value="Back"
+                       style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+                </center>
+        </form>
+
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+    body{
+    background-image:url("train.jpeg");
+    background-size:cover;
+    font-family: cursive;
+    }
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .container1 {
+        position: relative;
+        text-align: left;
+        color: white;
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+          }
+        .bg-image {
+  /* The image used */
+    background-image: url("train.jpeg");
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode: lighten;
+
+  /* Add the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+  /* Full height */
+    height: 100%;
+
+  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+	.contents{
+	margin-top:200px;
+	}

@@ -1,0 +1,46 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'railway/style.css' %}">
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="container">
+    <form action="/railway/showTrains/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+    <div class="centered"><h1>Welcome To Indian Railways</h1></div><br><br><br>
+	<div class="contents">
+         <label for="start">Source:</label>
+        <input type="text" placeholder="From Station" class="final-score" name="src" required="required">
+        <label for="start">Destination:</label>
+
+        <input type="text" placeholder="To Destination" class="final-score" name="dest" required="required">
+        <label for="start">Date:</label>
+
+        <input type="date" id="start" value="2020-08-2" min="2020-08-01" max="2030-12-31" name="journey_date" required="required">
+        <label for="train_type">Train Type:</label>
+        <select name="train_type" id="train-type" >
+            <option value="Special">Special</option>
+            <option value="Express">Express</option>
+            <option value="Superfast">Superfast</option>
+            <option value="Rajdhani">Rajdhani</option>
+            <option value="Shatabdi">Shatabdi</option>
+            <option value="Duronto">Duronto</option>
+            <option value="Garib Rath Express">Garib Rath Express</option>
+            <option value="Humsafar Express">Humsafar Express</option>
+
+        </select>
+        <label for="night_shift">Search for Night Stop Train Also:</label>
+        <select name="night_shift" id="journey-time">
+            <option value="Yes">Y</option>
+            <option value="No">N</option>
+        </select><br><br><br>
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>Submit</button>
+    </div>
+    </form>
+</div>
+
+</body>
+
+</html>
