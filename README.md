@@ -11,7 +11,7 @@
 
 # Organization: Ministry of Railways
 
-#Concept:
+# Concept:
 
 The aim is to provide confirmed tickets to the passengers in minimum travelling time and to provide technology which improves  probability of getting tickets . When the passenger enters origin  and destination, a list of all the possible routes will appear to the user .This will help the passenger to opt for the best route to reach his destination in less journey time .
 The key concept used in finding the alternate routes between source and destination is to find the intersection of the in-between station of source and destination  and  applying the constraints like time, fare etc. by using an algorithm. It will further help in the optimization and provide the user with a list of alternative routes. Additionally, we are implementing the route rank concept using reinforcement learning, so the 
@@ -50,7 +50,7 @@ Constraints:
 
  # Conquering the difficulties faced by the Indian Railways system with respect to booking, we have effectively executed the initial step of our proposed solution. This progression would give simplicity to the passengers in getting a confirmed booking when they enter the origin and destination, by giving probable options and alternatives routes to reach their desired destination.
  
- # Our Algorithim is optimize and precise and able to find the alternative routes between source and destination within seconds.
+ # Our Algorithim is optimize and precise and able to find the most efficient alternative routes between source and destination within seconds.
  
  
  ##THANK YOU ##
