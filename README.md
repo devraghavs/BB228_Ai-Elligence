@@ -1,8 +1,10 @@
 # BB228_Ai-Elligence
 
-# Problem Statement: "AI Based Reservation System"
+# Problem Statement:
+"AI Based Reservation System"
 
-# Description: Getting quicker and earliest booking in Indian Railways system is sometimes a challenge for passengers. The challenge is to devise an optimization using latest technologies which improves probability of getting ticket, improve booking time and customer experience remarkably. Expectation from solution are
+# Description: 
+Getting quicker and earliest booking in Indian Railways system is sometimes a challenge for passengers. The challenge is to devise an optimization using latest technologies which improves probability of getting ticket, improve booking time and customer experience remarkably. Expectation from solution are
 
 (1) Once passenger enters origin and destination, probable options and alternatives should be provided to 
     him, within predefined/limited time frame. This should help passenger in getting confirm seat. 
@@ -44,16 +46,18 @@ Constraints:
 # Optimization:
   We have optimised our algorithm by reducing the complexity and decreasing the execution time of the code .It is achieved through various steps:
 
-  -->>Pre Computation of  Data -  Initially we were fetching our data from API’s  but now we have stored our data locally to reduce the amount of  time  used to fetch the data .
+#  -->>Pre Computation of  Data - 
+ Initially we were fetching our data from API’s  but now we have stored our data locally to reduce the amount of  time  used to fetch the data .
 
-  -->>Caching- A cache is a high-speed data storage layer which stores a subset of data, typically transient in nature, so that future requests for that data are served up faster than is possible by accessing the data’s primary storage location. Caching allows us to efficiently reuse previously retrieved or computed data.
+#  -->>Caching- 
+  A cache is a high-speed data storage layer which stores a subset of data, typically transient in nature, so that future requests for that data are served up faster than is possible by accessing the data’s primary storage location. Caching allows us to efficiently reuse previously retrieved or computed data.
 
- # Conquering the difficulties faced by the Indian Railways system with respect to booking, we have effectively executed the initial step of our proposed solution. This progression would give simplicity to the passengers in getting a confirmed booking when they enter the origin and destination, by giving probable options and alternatives routes to reach their desired destination.
+ Conquering the difficulties faced by the Indian Railways system with respect to booking, we have effectively executed the initial step of our proposed solution. This progression would give simplicity to the passengers in getting a confirmed booking when they enter the origin and destination, by giving probable options and alternatives routes to reach their desired destination.
  
- # Our Algorithim is optimize and precise and able to find the most efficient alternative routes between source and destination within seconds.
+ Our Algorithim is optimize and precise and able to find the most efficient alternative routes between source and destination within seconds.
  
  
- ##THANK YOU ##
+ # THANK YOU !! 
 
 
 
